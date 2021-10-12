@@ -1,0 +1,16 @@
+C:\Users\ryncl\Desktop\OCBC\SESI1\Sesi1_Tambahan\bin\Debug\net5.0\SESI1_Tambahan.exe
+C:\Users\ryncl\Desktop\OCBC\SESI1\Sesi1_Tambahan\bin\Debug\net5.0\SESI1_Tambahan.deps.json
+C:\Users\ryncl\Desktop\OCBC\SESI1\Sesi1_Tambahan\bin\Debug\net5.0\SESI1_Tambahan.runtimeconfig.json
+C:\Users\ryncl\Desktop\OCBC\SESI1\Sesi1_Tambahan\bin\Debug\net5.0\SESI1_Tambahan.runtimeconfig.dev.json
+C:\Users\ryncl\Desktop\OCBC\SESI1\Sesi1_Tambahan\bin\Debug\net5.0\SESI1_Tambahan.dll
+C:\Users\ryncl\Desktop\OCBC\SESI1\Sesi1_Tambahan\bin\Debug\net5.0\ref\SESI1_Tambahan.dll
+C:\Users\ryncl\Desktop\OCBC\SESI1\Sesi1_Tambahan\bin\Debug\net5.0\SESI1_Tambahan.pdb
+C:\Users\ryncl\Desktop\OCBC\SESI1\Sesi1_Tambahan\obj\Debug\net5.0\SESI1_Tambahan.csproj.AssemblyReference.cache
+C:\Users\ryncl\Desktop\OCBC\SESI1\Sesi1_Tambahan\obj\Debug\net5.0\SESI1_Tambahan.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ryncl\Desktop\OCBC\SESI1\Sesi1_Tambahan\obj\Debug\net5.0\SESI1_Tambahan.AssemblyInfoInputs.cache
+C:\Users\ryncl\Desktop\OCBC\SESI1\Sesi1_Tambahan\obj\Debug\net5.0\SESI1_Tambahan.AssemblyInfo.cs
+C:\Users\ryncl\Desktop\OCBC\SESI1\Sesi1_Tambahan\obj\Debug\net5.0\SESI1_Tambahan.csproj.CoreCompileInputs.cache
+C:\Users\ryncl\Desktop\OCBC\SESI1\Sesi1_Tambahan\obj\Debug\net5.0\SESI1_Tambahan.dll
+C:\Users\ryncl\Desktop\OCBC\SESI1\Sesi1_Tambahan\obj\Debug\net5.0\ref\SESI1_Tambahan.dll
+C:\Users\ryncl\Desktop\OCBC\SESI1\Sesi1_Tambahan\obj\Debug\net5.0\SESI1_Tambahan.pdb
+C:\Users\ryncl\Desktop\OCBC\SESI1\Sesi1_Tambahan\obj\Debug\net5.0\SESI1_Tambahan.genruntimeconfig.cache

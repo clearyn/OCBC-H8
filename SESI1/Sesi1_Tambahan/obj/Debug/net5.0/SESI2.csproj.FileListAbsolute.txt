@@ -1,0 +1,16 @@
+C:\Users\ryncl\Desktop\OCBC\SESI2\bin\Debug\net5.0\SESI2.exe
+C:\Users\ryncl\Desktop\OCBC\SESI2\bin\Debug\net5.0\SESI2.deps.json
+C:\Users\ryncl\Desktop\OCBC\SESI2\bin\Debug\net5.0\SESI2.runtimeconfig.json
+C:\Users\ryncl\Desktop\OCBC\SESI2\bin\Debug\net5.0\SESI2.runtimeconfig.dev.json
+C:\Users\ryncl\Desktop\OCBC\SESI2\bin\Debug\net5.0\SESI2.dll
+C:\Users\ryncl\Desktop\OCBC\SESI2\bin\Debug\net5.0\ref\SESI2.dll
+C:\Users\ryncl\Desktop\OCBC\SESI2\bin\Debug\net5.0\SESI2.pdb
+C:\Users\ryncl\Desktop\OCBC\SESI2\obj\Debug\net5.0\SESI2.csproj.AssemblyReference.cache
+C:\Users\ryncl\Desktop\OCBC\SESI2\obj\Debug\net5.0\SESI2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ryncl\Desktop\OCBC\SESI2\obj\Debug\net5.0\SESI2.AssemblyInfoInputs.cache
+C:\Users\ryncl\Desktop\OCBC\SESI2\obj\Debug\net5.0\SESI2.AssemblyInfo.cs
+C:\Users\ryncl\Desktop\OCBC\SESI2\obj\Debug\net5.0\SESI2.csproj.CoreCompileInputs.cache
+C:\Users\ryncl\Desktop\OCBC\SESI2\obj\Debug\net5.0\SESI2.dll
+C:\Users\ryncl\Desktop\OCBC\SESI2\obj\Debug\net5.0\ref\SESI2.dll
+C:\Users\ryncl\Desktop\OCBC\SESI2\obj\Debug\net5.0\SESI2.pdb
+C:\Users\ryncl\Desktop\OCBC\SESI2\obj\Debug\net5.0\SESI2.genruntimeconfig.cache
