@@ -1,6 +1,6 @@
 using System;
 
-    class Program
+    class SegitigaAlfabet
     {
         static void Main(string[] args)
         {

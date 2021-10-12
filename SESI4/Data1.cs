@@ -4,24 +4,32 @@ using System;
     {
         public static void Main()
         {
-           
+            int[] aAngka = new int[5];
+            string[] aNama = new string[] { "Joni", "Meri", "David" };
+            object[] aObjek = { 20.33, "Lorem ipsum", DateTime.Now, true, 'D' };
+
+            //aAngka insert and show data
+            for (int i = 0; i < 5; i++)
+            {
+                aAngka[i] = i;
+            }
+
+            foreach (var item in aAngka)
+            {
+                Console.WriteLine(item);
+            }
+
+            //aNama show data
+            foreach (var item in aNama)
+            {
+                Console.WriteLine(item);
+            }
+
+            //aObjek show data
+            foreach (var item in aObjek)
+            {
+                Console.WriteLine(item);
+            }
         }
 
-        public void AllocationMemory()
-        {   
-            //Line 1
-            int x = 4;
-
-            //Line 2
-            int y = 2;
-
-            Kendaraan mobil = new Kendaraan();
-        }
     }
-
-    class Kendaraan
-    {
-        
-    }
-
-    
