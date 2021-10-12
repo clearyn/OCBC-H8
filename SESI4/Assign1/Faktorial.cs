@@ -6,17 +6,14 @@ using System;
         {
             Console.Write("Enter any number: ");
             int number = Convert.ToInt32(Console.ReadLine());
-            int[] factor = new int[]{};
-            int result;
-            for (int i = number - 1; i == 0; i--)
-            {
-                factor[factor.Length + 1] = i;
+            int result = number;
+            // Standard method but using largest first as real math calculation
+            for (int i = number-1; i > 0; i--)
+            {   
+                Console.WriteLine($"Calculate {result} * {i}");
+                result = result*i;
             }
-            foreach (int item in factor)
-            {
-                result = 
-            }
-            Console.WriteLine($"Factorial of {factor.Length}");
+            Console.WriteLine($"Factorial of {number}! is : {result}");
 
         }
     }
