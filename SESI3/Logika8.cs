@@ -8,9 +8,12 @@ using System;
            int i = Convert.ToInt32(Console.ReadLine());
            Console.WriteLine("Masukan batas akhir pengulangan: ");
            int l = Convert.ToInt32(Console.ReadLine());
+
+           //Validation
            if(i > l){
                Console.WriteLine("Angka awal tidak boleh lebih besar dari angka akhir pengulangan!");
            }else{
+               //Choice operator
                 Console.WriteLine("Pilih operator untuk pengulangan (1,2,3,4)");
                 int jenis =  Convert.ToInt32(Console.ReadLine());
                 int d = 1;
