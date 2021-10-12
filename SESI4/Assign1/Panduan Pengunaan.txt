@@ -5,6 +5,7 @@ Data Peserta:
     Nomor Peserta       : 003 (FSDO001ONL003)
     Alamat              : Muararajeun Lama no 117A/144E, Kota Bandung
     Notes               : Untuk kode program di run melalui mono pada vscode (Untuk petunjuk penggunaan sudah saya beri comment pada masing" file)
+    Github Link		: https://github.com/clearyn/OCBC-H8/tree/main/SESI4/Assign1
 
 Nama File & Keterangan:
     Soal 1   - SegitigaAlfabet.cs , Ket: Program untuk membuat segitiga dengan alfabet pada terminal dengan input jumlah baris.
