@@ -2,7 +2,7 @@ using System;
 
     class Length
     {
-        static void Main()
+        public static void Main()
         {
             int[] angka = new int[10];
 

@@ -2,7 +2,7 @@ using System;
 
     class Data3
     {
-        static void Main()
+        public static void Main()
         {
            int[,] tabel = new int[3, 4];
 

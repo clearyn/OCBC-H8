@@ -2,7 +2,7 @@ using System;
 
     class Jagged
     {
-        static void Main()
+        public static void Main()
         {
             int[][] jagged = new int[3][];
             jagged[0] = new int[4];

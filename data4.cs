@@ -2,7 +2,7 @@ using System;
 
     class Data4
     {
-        static void Main()
+        public static void Main()
         {
           int[,] data4 = {
               {1, 1},

@@ -2,7 +2,7 @@ using System;
 
 class Panjang3D
 {
-    public static void main()
+    public static void Main()
     {
         int[, ,] angka = new int[10, 5, 6];
 
