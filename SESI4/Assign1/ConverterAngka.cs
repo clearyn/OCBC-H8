@@ -2,6 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+// Converter Angka
+// Input: Bisa campuran angka dan huruf contoh "123456789abcdefg"
+// Output: Mengubah setiap elemen pada kalimat tidak termasuk alfabet menjadi kalimat inggris per elemen
+
     class ConverterAngka
     {
         static void Main(string[] args)
@@ -11,9 +15,8 @@ using System.Linq;
             string numbers = Convert.ToString(Console.ReadLine());
             //Convert string to char
             char[] arrayNumber = numbers.ToCharArray();
-            Console.Write("Reversed & Converted Word: ");
+            Console.Write("Converted Word: ");
             //Convert using switch
-            Array.Reverse( arrayNumber);
             foreach (var item in arrayNumber)
             {   
                 string choice = " ";
@@ -44,7 +47,7 @@ using System.Linq;
                         choice = "Eight";
                         break;
                     case '9':
-                        choice = "Eight";
+                        choice = "Nine";
                         break;
                     default:
                         choice = Convert.ToString(item);

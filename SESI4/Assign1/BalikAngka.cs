@@ -2,6 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+// Balik Angka
+// Input: Angka 1-9, contoh "123456789"
+// Output: Hasil input yang dibalik dari huruf terakhir pada input, juga tambahan index angka yang terbaca
+
     class BalikAngka
     {
         static void Main(string[] args)

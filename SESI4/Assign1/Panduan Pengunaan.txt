@@ -1,0 +1,14 @@
+Selamat datang di panduan pengunaan Assignment untuk course FSD(OCBC x Hacktiv8)
+
+Data Peserta:
+    Nama Lengkap Saya   : Ryan Cleary
+    Nomor Peserta       : 003 (FSDO001ONL003)
+    Alamat              : Muararajeun Lama no 117A/144E, Kota Bandung
+    Notes               : Untuk kode program di run melalui mono pada vscode (Untuk petunjuk penggunaan sudah saya beri comment pada masing" file)
+
+Nama File & Keterangan:
+    Soal 1   - SegitigaAlfabet.cs , Ket: Program untuk membuat segitiga dengan alfabet pada terminal dengan input jumlah baris.
+    Soal 2   - SegitigaAngka.cs , Ket: Program untuk membuat segitiga dengan angka pada terminal dengan input jumlah baris
+    Soal 3   - Faktorial.cs , Ket: Program untuk membuat segitiga pada terminal dengan input baris
+    Soal 4   - BalikAngka.cs , Ket: Program membalikan angka yang di input 
+    Soal 5,6 - ConverterAngka.cs , Ket: Convert angka 1-9 menjadi huruf bahasa inggris 
