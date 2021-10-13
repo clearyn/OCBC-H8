@@ -1,0 +1,16 @@
+C:\Users\ryncl\Desktop\OCBC\SESI5\Gabungan\obj\Debug\net5.0\gabungan.csproj.AssemblyReference.cache
+C:\Users\ryncl\Desktop\OCBC\SESI5\Gabungan\obj\Debug\net5.0\gabungan.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ryncl\Desktop\OCBC\SESI5\Gabungan\obj\Debug\net5.0\gabungan.AssemblyInfoInputs.cache
+C:\Users\ryncl\Desktop\OCBC\SESI5\Gabungan\obj\Debug\net5.0\gabungan.AssemblyInfo.cs
+C:\Users\ryncl\Desktop\OCBC\SESI5\Gabungan\obj\Debug\net5.0\gabungan.csproj.CoreCompileInputs.cache
+C:\Users\ryncl\Desktop\OCBC\SESI5\Gabungan\bin\Debug\net5.0\gabungan.exe
+C:\Users\ryncl\Desktop\OCBC\SESI5\Gabungan\bin\Debug\net5.0\gabungan.deps.json
+C:\Users\ryncl\Desktop\OCBC\SESI5\Gabungan\bin\Debug\net5.0\gabungan.runtimeconfig.json
+C:\Users\ryncl\Desktop\OCBC\SESI5\Gabungan\bin\Debug\net5.0\gabungan.runtimeconfig.dev.json
+C:\Users\ryncl\Desktop\OCBC\SESI5\Gabungan\bin\Debug\net5.0\gabungan.dll
+C:\Users\ryncl\Desktop\OCBC\SESI5\Gabungan\bin\Debug\net5.0\ref\gabungan.dll
+C:\Users\ryncl\Desktop\OCBC\SESI5\Gabungan\bin\Debug\net5.0\gabungan.pdb
+C:\Users\ryncl\Desktop\OCBC\SESI5\Gabungan\obj\Debug\net5.0\gabungan.dll
+C:\Users\ryncl\Desktop\OCBC\SESI5\Gabungan\obj\Debug\net5.0\ref\gabungan.dll
+C:\Users\ryncl\Desktop\OCBC\SESI5\Gabungan\obj\Debug\net5.0\gabungan.pdb
+C:\Users\ryncl\Desktop\OCBC\SESI5\Gabungan\obj\Debug\net5.0\gabungan.genruntimeconfig.cache

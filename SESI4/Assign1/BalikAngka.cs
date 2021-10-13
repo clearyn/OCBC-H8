@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
 // Balik Angka
 // Input: Angka 1-9, contoh "123456789"

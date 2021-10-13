@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
 // Converter Angka
 // Input: Bisa campuran angka dan huruf contoh "123456789abcdefg"

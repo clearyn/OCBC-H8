@@ -1,0 +1,16 @@
+C:\Users\ryncl\Desktop\OCBC\SESI5\pro4\obj\Debug\net5.0\pro4.csproj.AssemblyReference.cache
+C:\Users\ryncl\Desktop\OCBC\SESI5\pro4\obj\Debug\net5.0\pro4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ryncl\Desktop\OCBC\SESI5\pro4\obj\Debug\net5.0\pro4.AssemblyInfoInputs.cache
+C:\Users\ryncl\Desktop\OCBC\SESI5\pro4\obj\Debug\net5.0\pro4.AssemblyInfo.cs
+C:\Users\ryncl\Desktop\OCBC\SESI5\pro4\obj\Debug\net5.0\pro4.csproj.CoreCompileInputs.cache
+C:\Users\ryncl\Desktop\OCBC\SESI5\pro4\bin\Debug\net5.0\pro4.exe
+C:\Users\ryncl\Desktop\OCBC\SESI5\pro4\bin\Debug\net5.0\pro4.deps.json
+C:\Users\ryncl\Desktop\OCBC\SESI5\pro4\bin\Debug\net5.0\pro4.runtimeconfig.json
+C:\Users\ryncl\Desktop\OCBC\SESI5\pro4\bin\Debug\net5.0\pro4.runtimeconfig.dev.json
+C:\Users\ryncl\Desktop\OCBC\SESI5\pro4\bin\Debug\net5.0\pro4.dll
+C:\Users\ryncl\Desktop\OCBC\SESI5\pro4\bin\Debug\net5.0\ref\pro4.dll
+C:\Users\ryncl\Desktop\OCBC\SESI5\pro4\bin\Debug\net5.0\pro4.pdb
+C:\Users\ryncl\Desktop\OCBC\SESI5\pro4\obj\Debug\net5.0\pro4.dll
+C:\Users\ryncl\Desktop\OCBC\SESI5\pro4\obj\Debug\net5.0\ref\pro4.dll
+C:\Users\ryncl\Desktop\OCBC\SESI5\pro4\obj\Debug\net5.0\pro4.pdb
+C:\Users\ryncl\Desktop\OCBC\SESI5\pro4\obj\Debug\net5.0\pro4.genruntimeconfig.cache
