@@ -47,6 +47,9 @@ namespace gabungan
                         Console.WriteLine("Pilihan tidak tersedia");
                         break;
                 }
+                Console.WriteLine("Enter to continue...");
+                Console.ReadLine();
+                Console.Clear();
 
             } while (loop == true);
             
