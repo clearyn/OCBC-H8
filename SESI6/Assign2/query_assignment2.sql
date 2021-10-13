@@ -24,21 +24,6 @@ VALUES ('Dhanny Rachmat', NULL, NULL, 'Jl Meikarta 99', NULL, 'Bandung', 'Indone
 ('Ajeng Sri Wulan', NULL, NULL, 'Jl Jakarta 4', NULL, 'Bandung', 'Indonesia', '40179', 'Indonesia', 4, NULL);
 SELECT * FROM customers;
 
---Tabel productlines
-CREATE TABLE productlines(
-	productLine INT primary key NOT NULL,
-	textDescription VARCHAR(50) NOT NULL,
-	htmlDescription VARCHAR(200),
-	image VARCHAR(50)
-);
-INSERT INTO productlines (productLine, textDescription, htmlDescription, image)
-VALUES (1, 'Motor', '<p>Ullamcorper velit lectus mus adipiscing.</p>','https://www.CBANK.id/Motor'),
-(2, 'Mobil', '<p>Mobil velit lectus mus adipiscing.</p>','https://www.CBANK.id/Mobil'),
-(3, 'Laptop', '<p>Laptop velit lectus mus adipiscing.</p>','https://www.CBANK.id/Laptop'),
-(4, 'Smartphone', '<p>Smartphone velit lectus mus adipiscing.</p>','https://www.CBANK.id/Smartphone'),
-(5, 'Tablet', '<p>Tablet velit lectus mus adipiscing.</p>','https://www.CBANK.id/Tablet');
-SELECT * FROM productlines;
-
 --Tabel products
 CREATE TABLE products(
 	productCode INT identity(1,1) primary key,
@@ -59,6 +44,22 @@ VALUES ('VARIO', 1, 'Honda', 'Sepeda motor Honda VARIO', 50, 15000000, 14500000)
 ('S28', 4, 'Samsung', 'Smartphone Samsung S28', 30, 11000000, 10000000),
 ('IPad', 5, 'Apple', 'Tablet IPad', 30, 9000000, 8000000);
 SELECT * FROM products;
+
+--Tabel productlines
+CREATE TABLE productlines(
+	productLine INT primary key NOT NULL,
+	textDescription VARCHAR(50) NOT NULL,
+	htmlDescription VARCHAR(200),
+	image VARCHAR(50)
+);
+INSERT INTO productlines (productLine, textDescription, htmlDescription, image)
+VALUES (1, 'Motor', '<p>Ullamcorper velit lectus mus adipiscing.</p>','https://www.CBANK.id/Motor'),
+(2, 'Mobil', '<p>Mobil velit lectus mus adipiscing.</p>','https://www.CBANK.id/Mobil'),
+(3, 'Laptop', '<p>Laptop velit lectus mus adipiscing.</p>','https://www.CBANK.id/Laptop'),
+(4, 'Smartphone', '<p>Smartphone velit lectus mus adipiscing.</p>','https://www.CBANK.id/Smartphone'),
+(5, 'Tablet', '<p>Tablet velit lectus mus adipiscing.</p>','https://www.CBANK.id/Tablet');
+SELECT * FROM productlines;
+
 
 --Tabel orders
 CREATE TABLE orders(
@@ -145,3 +146,13 @@ VALUES ('Bandung', '08911111', 'Jl Jawa 82', NULL, 'Indonesia', 'Indonesia', '40
 ('Bandung', '08911112', 'Jl Banda 22', '/90c', 'Indonesia', 'Indonesia', '40122', NULL),
 ('Bandung', '08911113', 'Jl Subang 18', NULL, 'Indonesia', 'Indonesia', '40125', 'Bandung');
 SELECT * FROM offices;
+
+-- More Improvement
+
+-- Largest Relation
+SELECT ctm.customerNumber, ctm.customerName, od.orderNumber, ods.quantityOrdered, pro.productName, pro.productLine, (emp.firstName +' '+ emp.lastName) as SalesRep 
+FROM customers ctm 
+JOIN orders od ON ctm.customerNumber = od.customerNumber
+JOIN orderDetails ods ON od.orderNumber = ods.orderNumber
+JOIN products pro ON ods.productCode = pro.productCode
+JOIN employees emp ON ctm.salesRepEmployeeNumber = emp.employeeNumber;
