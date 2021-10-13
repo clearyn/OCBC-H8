@@ -48,8 +48,8 @@ INSERT INTO staff_outsource (nama, alamat, handphone, joindate)
 VALUES ('Aplus_s', 'Jalan jakarta 56', '089123412556','2021-10-01'),
 ('Amin_s', 'Jalan sumba 6', '089123423256','2021-10-02'),
 ('Anggi_s', 'Jalan jendral soedirman', '089678412556','2021-10-03'),
-('Dhanny_s', 'Cibadak 22', '0892356656''2021-10-04'),
-('Hery_s', 'Supratman 99', '08322512556''2021-10-05');
+('Dhanny_s', 'Cibadak 22', '0892356656','2021-10-04'),
+('Hery_s', 'Supratman 99', '08322512556','2021-10-05');
 
 
 INSERT INTO staff_outsource (nama, alamat, handphone, joindate)
@@ -71,6 +71,3 @@ FROM data_staff ds LEFT JOIN staff_outsource so ON ds.joindate = so.joindate;
 --Jawaban M
 SELECT ds.nama, ds.joindate, so.nama, so.joindate
 FROM data_staff ds FULL JOIN staff_outsource so ON ds.joindate = so.joindate
-
-
-
