@@ -1,0 +1,100 @@
+--SELECT 
+SELECT * FROM data_staff;
+
+--DELETE
+DELETE FROM data_staff;
+
+--Jawaban A
+CREATE database db_nama_staff;
+
+--Jawaban B
+CREATE TABLE data_staff(
+	nik INT identity(1,1) primary key,
+	nama VARCHAR(50),
+	alamat VARCHAR(200),
+	handphone VARCHAR(15)
+);
+
+--Jawaban C
+INSERT INTO data_staff (nama, alamat, handphone)
+VALUES ('FirstMan', 'Jalan bandung 56', '089123435556');
+
+
+--Jawaban D
+INSERT INTO data_staff (nama, alamat, handphone)
+VALUES ('Aplus', 'Jalan jakarta 56', '089123412556'),
+('Amin', 'Jalan sumba 6', '089123423256'),
+('Bplus', 'Jalan tegal 205', '08912342'),
+('Bmin', 'Jalan ciliwung 123', '083123412556'),
+('Cplus', 'Gg luna 23', '08554332556'),
+('Cmin', 'Kebon jeruk 5c', '089645512556'),
+('Anggi', 'Jalan jendral soedirman', '089678412556'),
+('Dhanny', 'Cibadak 22', '0892356656'),
+('Hery', 'Supratman 99', '08322512556');
+
+-- Jawaban E
+ALTER TABLE data_staff ADD joindate DATE;
+
+--UPDATE data_staff SET joindate = GETDATE() WHERE joindate IS NULL;
+
+INSERT INTO data_staff (nama, alamat, handphone, joindate)
+VALUES ('Another_Diff_s', 'Jalan jakarta 56', '089123412556', '2010-10-09'),
+('Dfirst_s', 'Jalan jakarta 56', '089123412556', '2010-10-06');
+
+-- Jawaban F
+SELECT TOP 2 * FROM data_staff ORDER BY nik ;
+
+-- Jawaban G
+SELECT TOP 3 * FROM data_staff ORDER BY nik ;
+
+-- Jawaban H
+CREATE TABLE staff_outsource(
+	nik INT identity(1,1) primary key,
+	nama VARCHAR(50),
+	alamat VARCHAR(200),
+	handphone VARCHAR(15)
+)
+ALTER TABLE staff_outsource ADD joindate DATE;
+
+-- Jawaban I
+INSERT INTO staff_outsource (nama, alamat, handphone)
+VALUES ('Aplus_s', 'Jalan jakarta 56', '089123412556'),
+('Amin_s', 'Jalan sumba 6', '089123423256'),
+('Bplus_s', 'Jalan tegal 205', '08912342'),
+('Bmin_s', 'Jalan ciliwung 123', '083123412556'),
+('Cplus_s', 'Gg luna 23', '08554332556'),
+('Cmin_s', 'Kebon jeruk 5c', '089645512556'),
+('Anggi_s', 'Jalan jendral soedirman', '089678412556'),
+('Dhanny_s', 'Cibadak 22', '0892356656'),
+('Hery_s', 'Supratman 99', '08322512556');
+
+--UPDATE staff_outsource SET joindate = GETDATE() WHERE joindate IS NULL;
+
+INSERT INTO staff_outsource (nama, alamat, handphone, joindate)
+VALUES ('Another_Diff_s', 'Jalan jakarta 56', '089123412556', '2010-10-02'),
+('Sfirst_s', 'Jalan jakarta 56', '089123412556', '2010-10-06');
+
+SELECT * FROM staff_outsource;
+
+--Jawaban J
+SELECT ds.nama, ds.joindate, so.nama, so.joindate
+FROM data_staff ds JOIN staff_outsource so ON ds.joindate = so.joindate
+WHERE ds.joindate = so.joindate;
+
+--Jawaban K
+SELECT ds.nama, ds.joindate, so.nama, so.joindate
+FROM data_staff ds LEFT JOIN staff_outsource so ON ds.joindate = so.joindate
+WHERE ds.joindate = so.joindate;
+
+--Jawaban L
+SELECT ds.nama, ds.joindate, so.nama, so.joindate
+FROM data_staff ds RIGHT JOIN staff_outsource so ON ds.joindate = so.joindate
+WHERE ds.joindate = so.joindate;
+
+--Jawaban M
+SELECT ds.nama, ds.joindate, so.nama, so.joindate
+FROM data_staff ds INNER JOIN staff_outsource so ON ds.joindate = so.joindate
+WHERE ds.joindate = so.joindate;
+
+
+
