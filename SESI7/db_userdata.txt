@@ -1,0 +1,11 @@
+-- Perintah CMD
+1.Register environtment path sql xampp
+2.Input :mysql -u root -p
+3.Use [namadatabase]
+
+-- Database
+CREATE TABLE `user_info` (`id` INT NOT NULL AUTO_INCREMENT,
+`names` VARCHAR(20) NOT NULL,
+`username` VARCHAR(100) NOT NULL, 
+`password` VARCHAR(255) NOT NULL,
+PRIMARY KEY (`id`));
