@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ryncl\\Desktop\\OCBC\\SESI5\\gabungan\\gabungan.csproj",
+      "projectUniqueName": "C:\\Users\\ryncl\\Desktop\\OCBC\\SESI5\\Gabungan\\gabungan.csproj",
       "projectName": "gabungan",
-      "projectPath": "C:\\Users\\ryncl\\Desktop\\OCBC\\SESI5\\gabungan\\gabungan.csproj",
+      "projectPath": "C:\\Users\\ryncl\\Desktop\\OCBC\\SESI5\\Gabungan\\gabungan.csproj",
       "packagesPath": "C:\\Users\\ryncl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ryncl\\Desktop\\OCBC\\SESI5\\gabungan\\obj\\",
+      "outputPath": "C:\\Users\\ryncl\\Desktop\\OCBC\\SESI5\\Gabungan\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ryncl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
