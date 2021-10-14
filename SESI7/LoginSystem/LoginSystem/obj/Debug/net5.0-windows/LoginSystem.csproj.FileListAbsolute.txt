@@ -25,3 +25,4 @@ C:\Users\ryncl\Desktop\OCBC\SESI7\LoginSystem\LoginSystem\obj\Debug\net5.0-windo
 C:\Users\ryncl\Desktop\OCBC\SESI7\LoginSystem\LoginSystem\obj\Debug\net5.0-windows\LoginSystem.pdb
 C:\Users\ryncl\Desktop\OCBC\SESI7\LoginSystem\LoginSystem\obj\Debug\net5.0-windows\LoginSystem.genruntimeconfig.cache
 C:\Users\ryncl\Desktop\OCBC\SESI7\LoginSystem\LoginSystem\obj\Debug\net5.0-windows\LoginSystem.Register.resources
+C:\Users\ryncl\Desktop\OCBC\SESI7\LoginSystem\LoginSystem\obj\Debug\net5.0-windows\LoginSystem.Properties.Resources.resources

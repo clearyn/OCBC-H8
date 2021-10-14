@@ -26,9 +26,11 @@ namespace LoginSystem
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            db.ExecuteSql("INSERT INTO `user_info` (`id`, `names`, `username`, `password`) VALUES (NULL, '"+textBox1.Text+ "', '" + textBox2.Text + "', '" + textBox3.Text + "')");
+            db.ExecuteSql("INSERT INTO `user_info` (`id`, `names`, `username`, `password`, `alamat`, `handphone`) " +
+                "VALUES (NULL, '"+txtNama.Text+ "', '" + txtUsername.Text + "', '" + txtPassword.Text + "' , '" + txtAlamat.Text + "' , '" + txtHandphone.Text + "')");
             MessageBox.Show("Data telah disimpan");
             this.Close();
         }
+
     }
 }

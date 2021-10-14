@@ -2,10 +2,16 @@
 1.Register environtment path sql xampp
 2.Input :mysql -u root -p
 3.Use [namadatabase]
+4.mysql -u root -p root
 
 -- Database
 CREATE TABLE `user_info` (`id` INT NOT NULL AUTO_INCREMENT,
 `names` VARCHAR(20) NOT NULL,
 `username` VARCHAR(100) NOT NULL, 
 `password` VARCHAR(255) NOT NULL,
+`alamat`  VARCHAR(50) NOT NULL,
+`handphone` INT NOT NULL,
 PRIMARY KEY (`id`));
+
+ALTER TABLE `user_info` ADD `alamat` VARCHAR(50) NOT NULL,
+`handphone` INT NOT NULL;
