@@ -3,6 +3,7 @@
 2.Input :mysql -u root -p
 3.Use [namadatabase]
 4.mysql -u root -p root
+5.create Database userdata
 
 -- Database
 CREATE TABLE `user_info` (`id` INT NOT NULL AUTO_INCREMENT,

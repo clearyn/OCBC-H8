@@ -42,12 +42,12 @@ namespace LoginSystem
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtHandphone = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtAlamat = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtHandphone = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -174,6 +174,22 @@ namespace LoginSystem
             this.panel2.Size = new System.Drawing.Size(330, 153);
             this.panel2.TabIndex = 11;
             // 
+            // txtHandphone
+            // 
+            this.txtHandphone.Location = new System.Drawing.Point(124, 112);
+            this.txtHandphone.Name = "txtHandphone";
+            this.txtHandphone.Size = new System.Drawing.Size(190, 27);
+            this.txtHandphone.TabIndex = 16;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(14, 115);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 20);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Handphone";
+            // 
             // txtAlamat
             // 
             this.txtAlamat.Location = new System.Drawing.Point(124, 78);
@@ -209,22 +225,6 @@ namespace LoginSystem
             this.label7.Size = new System.Drawing.Size(250, 31);
             this.label7.TabIndex = 13;
             this.label7.Text = "Register New Account";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(14, 115);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 20);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Handphone";
-            // 
-            // txtHandphone
-            // 
-            this.txtHandphone.Location = new System.Drawing.Point(124, 112);
-            this.txtHandphone.Name = "txtHandphone";
-            this.txtHandphone.Size = new System.Drawing.Size(190, 27);
-            this.txtHandphone.TabIndex = 16;
             // 
             // Register
             // 

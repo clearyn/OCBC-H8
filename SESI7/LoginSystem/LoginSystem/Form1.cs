@@ -32,6 +32,9 @@ namespace LoginSystem
             if (db.Count() == 1)
             {
                 MessageBox.Show("Success You will Login as :" + db.Results(0, "names"));
+                HalamanUtama halamanUtama = new HalamanUtama(db.Results(0, "names"), db.Results(0, "username"));
+                halamanUtama.Show();
+                this.Hide();
             }
             else
             {
