@@ -50,7 +50,6 @@ C:\Users\ryncl\Desktop\OCBC\SESI10\TodoApp\obj\Debug\net5.0\staticwebassets\Todo
 C:\Users\ryncl\Desktop\OCBC\SESI10\TodoApp\obj\Debug\net5.0\staticwebassets\TodoApp.StaticWebAssets.xml
 C:\Users\ryncl\Desktop\OCBC\SESI10\TodoApp\obj\Debug\net5.0\scopedcss\bundle\TodoApp.styles.css
 C:\Users\ryncl\Desktop\OCBC\SESI10\TodoApp\obj\Debug\net5.0\TodoApp.RazorTargetAssemblyInfo.cache
-C:\Users\ryncl\Desktop\OCBC\SESI10\TodoApp\obj\Debug\net5.0\TodoApp.csproj.CopyComplete
 C:\Users\ryncl\Desktop\OCBC\SESI10\TodoApp\obj\Debug\net5.0\TodoApp.dll
 C:\Users\ryncl\Desktop\OCBC\SESI10\TodoApp\obj\Debug\net5.0\ref\TodoApp.dll
 C:\Users\ryncl\Desktop\OCBC\SESI10\TodoApp\obj\Debug\net5.0\TodoApp.pdb
