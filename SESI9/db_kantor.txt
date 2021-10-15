@@ -1,0 +1,13 @@
+CREATE database kantor;
+
+CREATE TABLE employee(`id` INT NOT NULL AUTO_INCREMENT,
+`nama` VARCHAR(25) NOT NULL,
+`jenis_kelamin` ENUM('Laki-Laki', 'Perempuan'),
+`alamat`  VARCHAR(50) NOT NULL,
+PRIMARY KEY (`id`));
+
+INSERT INTO employee(nama, jenis_kelamin,alamat)
+VALUES("John Doe", 'Laki-Laki', 'Pagedangan'),
+('Alicia Jordan', 'Perempuan', 'Surabaya'),
+('Smith', 'Laki-Laki', 'Manado'),
+('James Dron', 'Laki-Laki', 'Jakarta');
