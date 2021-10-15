@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "x/XgowRJMSp4ljsbK9hwl5+qc1WeBavRlbd7HEPxNJ5p7ju8kep37EONSh7bkSjzlmD4+VkR8hRtYhdvKt7bRg==",
+  "dgSpecHash": "TWd56Avw9kJ1TgtA8HJS+kXkW0L/m1MjSbp7XrrCuwP3xwHtxCf8aQ5bQBZ23wSZj7wcVtWjVBZQdNIrxLRewg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ryncl\\Desktop\\OCBC\\SESI9\\Kantor_WebAPI\\Kantor_WebAPI\\Kantor_WebAPI.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,8 @@
     "C:\\Users\\ryncl\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\ryncl\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\ryncl\\.nuget\\packages\\mysql.data\\8.0.26\\mysql.data.8.0.26.nupkg.sha512",
+    "C:\\Users\\ryncl\\.nuget\\packages\\ssh.net\\2020.0.1\\ssh.net.2020.0.1.nupkg.sha512",
+    "C:\\Users\\ryncl\\.nuget\\packages\\sshnet.security.cryptography\\1.3.0\\sshnet.security.cryptography.1.3.0.nupkg.sha512",
     "C:\\Users\\ryncl\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\ryncl\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.1\\system.configuration.configurationmanager.4.4.1.nupkg.sha512",
     "C:\\Users\\ryncl\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
