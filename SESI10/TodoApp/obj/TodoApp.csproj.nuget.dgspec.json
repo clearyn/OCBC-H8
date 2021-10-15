@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[5.0.11, )"
             },
+            "NuGet.CommandLine.XPlat": {
+              "target": "Package",
+              "version": "[5.11.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
