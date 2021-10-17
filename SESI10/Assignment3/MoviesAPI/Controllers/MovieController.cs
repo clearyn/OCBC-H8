@@ -1,5 +1,4 @@
 using System.Threading.Tasks;
-//JWT
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -7,17 +6,16 @@ using Microsoft.EntityFrameworkCore;
 using MoviesAPI.Data;
 using MoviesAPI.Models;
 
-
 namespace MoviesAPI.Controllers
-{   
-    [Route("api/[controller]")] // Define routing
-    [ApiController] // We need to specify type controller
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]// Login user only aka JWT Auth
-    public class TodoController: ControllerBase
-    {   
+{
+    [Route("api/[controller]")] 
+    [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    public class MoviesAPIController : ControllerBase
+    {
         private readonly ApiDbContext _context;
 
-        public TodoController(ApiDbContext context)
+        public MoviesAPIController(ApiDbContext context)
         {
             _context = context;
         }
@@ -25,16 +23,16 @@ namespace MoviesAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetItems()
         {
-            var items = await _context.Items.ToListAsync();
-            return Ok(items);
+            var Movie = await _context.Movie.ToListAsync();
+            return Ok(Movie);
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateItem(ItemData data)
+        public async Task<IActionResult> CreateItem(MovieData data)
         {
             if (ModelState.IsValid)
             {
-                await _context.Items.AddAsync(data);
+                await _context.Movie.AddAsync(data);
                 await _context.SaveChangesAsync();
 
                 return CreatedAtAction("GetItem", new {data.Id}, data);
@@ -45,7 +43,7 @@ namespace MoviesAPI.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetItem(int id)
         {
-            var item = await _context.Items.FirstOrDefaultAsync(x => x.Id == id);
+            var item = await _context.Movie.FirstOrDefaultAsync(x => x.Id == id);
 
             if (item == null)
                 return NotFound();
@@ -54,19 +52,20 @@ namespace MoviesAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult>UpdateItems(int id, ItemData item)
+        public async Task<IActionResult>UpdateItems(int id, MovieData item)
         {
             if (id != item.Id)
                 return BadRequest();
 
-            var existItem = await _context.Items.FirstOrDefaultAsync(x => x.Id == id);
+            var existItem = await _context.Movie.FirstOrDefaultAsync(x => x.Id == id);
 
             if(existItem == null)
                 return  NotFound();
 
-            existItem.Title = item.Title;
-            existItem.Description = item.Description;
-            existItem.Done = item.Done;
+            existItem.Name = item.Name;
+            existItem.Genre = item.Genre;
+            existItem.Duration = item.Duration;
+            existItem.ReleaseDate = item.ReleaseDate;
 
             await _context.SaveChangesAsync();
 
@@ -76,22 +75,15 @@ namespace MoviesAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteItem(int id)
         {
-            var existItem = await _context.Items.FirstOrDefaultAsync(x => x.Id == id);
+            var existItem = await _context.Movie.FirstOrDefaultAsync(x => x.Id == id);
 
             if(existItem == null)
                 return  NotFound();
 
-            _context.Items.Remove(existItem);
+            _context.Movie.Remove(existItem);
             await _context.SaveChangesAsync();
 
             return Ok(existItem);
         }
-
-        // [Route("TestRun")]
-        // public ActionResult TestRun()
-        // {
-        //     return Ok("success");
-        // }
-
     }
 }
