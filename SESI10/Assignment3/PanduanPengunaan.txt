@@ -1,0 +1,23 @@
+Data Peserta:
+    Nama Lengkap Saya   : Ryan Cleary
+    Nomor Peserta       : 003 (FSDO001ONL003)
+    Notes               : Hasil sudah dapat generate database MySql lewat script, hanya belum ketemu
+			  cara seed pada migration. Untuk sql script saya pisah di moviesdb.sql
+    Github Link		: https://github.com/clearyn/OCBC-H8/tree/main/SESI10/Assignment3
+
+File Pendamping:
+1.Test_MovieAPI.postman_collection.json (Postman)
+2.moviesdb.sql (SQL)
+
+Langkah Pengujian :
+1. Download dan extract 003_RyanCleary_Assignment3
+2. Nyalakan MySql pada xampp
+3. Run Project menggunakan perintah "dotnet run" pada direktori MoviesAPI
+4. Buka aplikasi Postman lalu import file -> Test_MovieAPI.postman_collection.json
+5. Jalankan script ke 1 dan 2 untuk register dan login user (body dapat diedit sesuai yang diharapkan, untuk response berhasil terlihat kode 200)
+6. Ambil response "token" lalu masukan ke script 3 sampai seterusnya pada tab header Authorization setelah kata Bearer (untuk response berhasil terlihat kode 200,201)
+7. Jalankan script 3 sampai seterusnya (bisa di edit pada body sesuai keinginan atau beberapa kali)
+8. Untuk swagger diakses melalui url "http://localhost:5000/swagger/index.html" pada web browser
+
+Sekian dan Terima kasih
+

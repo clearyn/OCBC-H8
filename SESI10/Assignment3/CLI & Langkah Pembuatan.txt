@@ -1,5 +1,0 @@
-//Inisialisai awal
-1.dotnet new webapi -n "MoviesAPI" -lang "C#" -au none
-2.dotnet add package MySql.EntityFrameworkCore --version 5.0.5
-3.dotnet add package NuGet.CommandLine.XPlat
-
