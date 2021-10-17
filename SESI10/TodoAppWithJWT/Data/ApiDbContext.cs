@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TodoAppWithJWT.Models;
-using Microsoft.EntityFrameworkCore.Sqlite;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 
 namespace TodoAppWithJWT.Data

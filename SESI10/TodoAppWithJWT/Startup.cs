@@ -9,14 +9,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
-using TodoApp.Data;
+using TodoAppWithJWT.Data;
 using TodoAppWithJWT.Configuration;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Identity;
 
-namespace TodoApp
+namespace TodoAppWithJWT
 {
     public class Startup
     {
@@ -83,7 +83,7 @@ namespace TodoApp
             app.UseRouting();
 
             //Autentikasi
-            app.UseAuthentications();
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

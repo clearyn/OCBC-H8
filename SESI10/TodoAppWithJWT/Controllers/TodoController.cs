@@ -83,11 +83,11 @@ namespace TodoAppWithJWT.Controllers
             return Ok(existItem);
         }
 
-        // [Route("TestRun")]
-        // public ActionResult TestRun()
-        // {
-        //     return Ok("success");
-        // }
+        [Route("TestRun")]
+        public ActionResult TestRun()
+        {
+            return Ok("success");
+        }
 
     }
 }
