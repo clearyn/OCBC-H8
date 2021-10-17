@@ -2,7 +2,7 @@ using System;
 
 namespace MoviesAPI.Models
 {
-    public class MovieData
+    public class ItemData
     {
         public int Id { get; set; }
         public string Name { get; set; }

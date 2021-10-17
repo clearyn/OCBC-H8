@@ -23,16 +23,16 @@ namespace MoviesAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetItems()
         {
-            var Movie = await _context.Movie.ToListAsync();
-            return Ok(Movie);
+            var Items = await _context.Items.ToListAsync();
+            return Ok(Items);
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateItem(MovieData data)
+        public async Task<IActionResult> CreateItem(ItemData data)
         {
             if (ModelState.IsValid)
             {
-                await _context.Movie.AddAsync(data);
+                await _context.Items.AddAsync(data);
                 await _context.SaveChangesAsync();
 
                 return CreatedAtAction("GetItem", new {data.Id}, data);
@@ -43,7 +43,7 @@ namespace MoviesAPI.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetItem(int id)
         {
-            var item = await _context.Movie.FirstOrDefaultAsync(x => x.Id == id);
+            var item = await _context.Items.FirstOrDefaultAsync(x => x.Id == id);
 
             if (item == null)
                 return NotFound();
@@ -52,12 +52,12 @@ namespace MoviesAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult>UpdateItems(int id, MovieData item)
+        public async Task<IActionResult>UpdateItems(int id, ItemData item)
         {
             if (id != item.Id)
                 return BadRequest();
 
-            var existItem = await _context.Movie.FirstOrDefaultAsync(x => x.Id == id);
+            var existItem = await _context.Items.FirstOrDefaultAsync(x => x.Id == id);
 
             if(existItem == null)
                 return  NotFound();
@@ -75,12 +75,12 @@ namespace MoviesAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteItem(int id)
         {
-            var existItem = await _context.Movie.FirstOrDefaultAsync(x => x.Id == id);
+            var existItem = await _context.Items.FirstOrDefaultAsync(x => x.Id == id);
 
             if(existItem == null)
                 return  NotFound();
 
-            _context.Movie.Remove(existItem);
+            _context.Items.Remove(existItem);
             await _context.SaveChangesAsync();
 
             return Ok(existItem);
