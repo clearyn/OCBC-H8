@@ -1,0 +1,6 @@
+//user
+{
+    "username": "swijaya@hacktiv8.com",
+    "email": "swijaya@hacktiv8.com",
+    "password": "Password12345!"
+}
