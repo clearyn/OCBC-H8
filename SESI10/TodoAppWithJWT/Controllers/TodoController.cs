@@ -1,4 +1,7 @@
 using System.Threading.Tasks;
+//JWT
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TodoAppWithJWT.Data;
@@ -9,6 +12,7 @@ namespace TodoAppWithJWT.Controllers
 {   
     [Route("api/[controller]")] // Define routing
     [ApiController] // We need to specify type controller
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]// Login user only aka JWT Auth
     public class TodoController: ControllerBase
     {   
         private readonly ApiDbContext _context;
