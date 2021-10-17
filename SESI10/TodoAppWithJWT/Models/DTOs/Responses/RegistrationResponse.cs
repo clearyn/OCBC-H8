@@ -1,8 +1,8 @@
 using TodoAppWithJWT.Configuration;
 
-namespace TodoAppWithJWT.Models.DTOs.Requests
+namespace TodoAppWithJWT.Models.DTOs.Responses
 {
-    public class RegistrasionResponse : AuthResult
+    public class RegistrationResponse : AuthResult
     {
         
     }

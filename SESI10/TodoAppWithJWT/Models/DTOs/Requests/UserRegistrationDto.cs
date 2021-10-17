@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TodoAppWithJWT.Models.DTOs.Requests
 {
-    public class UserLoginRequestDto
+    public class UserRegistrationDto
     {
         [Required]
         public string Username { get; set;}
