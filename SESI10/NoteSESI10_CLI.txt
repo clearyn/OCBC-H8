@@ -18,3 +18,12 @@ VALUES ("Yamaha", "NMAX", 1),
 //middleware
 1.dotnet ef migrations add"Initial Migrations"
 2.dotnet ef database update
+
+//setting auth
+1.dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
+2.dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore
+3.dotnet add package Microsoft.AspNetCore.Identity.UI
+4.generate seed jwt https://www.browserling.com/tools/random-string "majirgpydrvzxxdmbkayaptappehllig"
+
+//setting auth 2 inherit IdentityDbContext & migrate
+1.dotnet ef migrations add “Addig authentication to our Api”
