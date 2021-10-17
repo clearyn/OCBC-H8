@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace TodoApp.Controllers
+namespace TodoAppWithJWT.Controllers
 {
     [ApiController]
     [Route("[controller]")]

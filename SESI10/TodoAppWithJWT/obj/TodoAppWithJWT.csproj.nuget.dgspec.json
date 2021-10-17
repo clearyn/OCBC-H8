@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ryncl\\Desktop\\OCBC\\SESI10\\TodoApp\\TodoApp.csproj": {}
+    "C:\\Users\\ryncl\\Desktop\\OCBC\\SESI10\\TodoAppWithJWT\\TodoAppWithJWT.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ryncl\\Desktop\\OCBC\\SESI10\\TodoApp\\TodoApp.csproj": {
+    "C:\\Users\\ryncl\\Desktop\\OCBC\\SESI10\\TodoAppWithJWT\\TodoAppWithJWT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ryncl\\Desktop\\OCBC\\SESI10\\TodoApp\\TodoApp.csproj",
-        "projectName": "TodoApp",
-        "projectPath": "C:\\Users\\ryncl\\Desktop\\OCBC\\SESI10\\TodoApp\\TodoApp.csproj",
+        "projectUniqueName": "C:\\Users\\ryncl\\Desktop\\OCBC\\SESI10\\TodoAppWithJWT\\TodoAppWithJWT.csproj",
+        "projectName": "TodoAppWithJWT",
+        "projectPath": "C:\\Users\\ryncl\\Desktop\\OCBC\\SESI10\\TodoAppWithJWT\\TodoAppWithJWT.csproj",
         "packagesPath": "C:\\Users\\ryncl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ryncl\\Desktop\\OCBC\\SESI10\\TodoApp\\obj\\",
+        "outputPath": "C:\\Users\\ryncl\\Desktop\\OCBC\\SESI10\\TodoAppWithJWT\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ryncl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,18 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[5.0.11, )"
