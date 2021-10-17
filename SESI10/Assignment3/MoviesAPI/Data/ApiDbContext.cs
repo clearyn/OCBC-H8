@@ -11,9 +11,23 @@ namespace MoviesAPI.Data
     {
         public virtual DbSet<ItemData> Items { get; set;}
 
+        // protected override void OnModelCreating(ModelBuilder builder)
+        // {   
+        //     builder.Entity<ItemData>().HasData(
+        //         new ItemData
+        //         {   
+        //             Id = 1,
+        //             Name = "Bad Boys for Life",
+        //             Genre = "Action/Comedy",
+        //             Duration = "2h 5mins",
+        //             ReleaseDate = System.DateTime.Today
+        //         }
+        //     );
+        // }
+
         public ApiDbContext(DbContextOptions<ApiDbContext> options) : base (options)
         {
             
-        } 
+        }
     }
 }
