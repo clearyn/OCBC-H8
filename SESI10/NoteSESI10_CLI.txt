@@ -4,12 +4,16 @@
 4.dotnet add package NuGet.CommandLine.XPlat
 
 //Remove
-1.dotnet ef migration remove
+1.dotnet ef migrations remove
 
 //SQL
 CREATE TABLE "Items" ( "Id" INTEGER NOT NULL CONSTRAINT "PK_Items" PRIMARY KEY AUTOINCREMENT, "Title" TEXT NULL, "Description" TEXT NULL, "Done" INTEGER NOT NULL );
 CREATE TABLE "__EFMigrationsHistory" ( "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY, "ProductVersion" TEXT NOT NULL );
 
+INSERT INTO Items (Title, Description, Done) 
+VALUES ("Yamaha", "NMAX", 1),
+("Honda", "VARIO", 0),
+("Suzuki", "SATRIA", 1);
 
 //middleware
 1.dotnet ef migrations add"Initial Migrations"

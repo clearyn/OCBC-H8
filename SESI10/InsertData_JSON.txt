@@ -1,0 +1,23 @@
+//Belum bisa insert data sekaligus, harus 1 per satu
+[
+    {
+        "title": "Voucher Makan All You Can Eat",
+        "Description": "Voucher berlaku hungga 31 Des 2021",
+        "done": false
+    },
+    {
+        "title": "Paket Terbang Keliling-Keliling",
+        "Description": "Tidak bisa refund",
+        "done": true
+    },
+    {
+        "title": "Voucher diskon N-MAX",
+        "Description": "Berlaku hingga 10 DES 2021",
+        "done": true
+    },
+    {
+        "title": "Paket Hotel Aston",
+        "Description": "Berlaku tiga hari sejak 16/10/2021",
+        "done": true
+    }
+]
