@@ -1,9 +1,12 @@
 using System.Threading.Tasks;
+using System.Collections.Generic;
 //JWT
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using TodoAppWithJWT.Models.DTOs.Requests;
+using TodoAppWithJWT.Models.DTOs.Responses;
 using TodoAppWithJWT.Data;
 using TodoAppWithJWT.Models;
 
@@ -26,7 +29,14 @@ namespace TodoAppWithJWT.Controllers
         public async Task<IActionResult> GetItems()
         {
             var items = await _context.Items.ToListAsync();
-            return Ok(items);
+            return Ok(new GlobalResponse()
+            {   
+                Message = new List<string>() {
+                        "ResultMessage: " + "Berikut data dari tabel",
+                },
+                result = items,
+                Success = true
+            });
         }
 
         [HttpPost]
@@ -50,7 +60,14 @@ namespace TodoAppWithJWT.Controllers
             if (item == null)
                 return NotFound();
             
-            return Ok(item);
+            return Ok(new GlobalResponse()
+            {   
+                Message = new List<string>() {
+                        "ResultMessage: " + "Berikut data dari id yang anda pilih",
+                },
+                result = item,
+                Success = true
+            });
         }
 
         [HttpPut("{id}")]
@@ -70,7 +87,13 @@ namespace TodoAppWithJWT.Controllers
 
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(new GlobalResponse()
+            {   
+                Message = new List<string>() {
+                        "ResultMessage: " + "Berhasil update item",
+                },
+                Success = true
+            });
         }
 
         [HttpDelete("{id}")]
@@ -84,7 +107,14 @@ namespace TodoAppWithJWT.Controllers
             _context.Items.Remove(existItem);
             await _context.SaveChangesAsync();
 
-            return Ok(existItem);
+            return Ok(new GlobalResponse()
+            {   
+                Message = new List<string>() {
+                        "ResultMessage: " + "Berikut data id yang dihapus",
+                },
+                result = existItem,
+                Success = true
+            });
         }
 
         // [Route("TestRun")]

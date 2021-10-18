@@ -9,4 +9,11 @@ namespace TodoAppWithJWT.Configuration
         public bool Success { get; set; }
         public List<string> Errors { get; set; }
     }
+
+    public class ApiGlobalResult
+    {
+        public List<string> Message { get; set; }
+        public object result { get; set; }
+        public bool Success { get; set; }
+    }
 }

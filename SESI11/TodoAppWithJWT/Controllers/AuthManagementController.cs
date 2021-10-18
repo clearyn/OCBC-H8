@@ -69,7 +69,13 @@ namespace TodoAppWithJWT.Controllers
                 {
                     var jwtToken = await GenerateJwtToken(newUser);
 
-                    return Ok(jwtToken);
+                    return Ok(new GlobalResponse()
+                    {
+                        Message = new List<string>() {
+                            "ResultMessage: " + "Data anda sudah direkam, untuk mendapatkan token silahkan gunakan method login",
+                        },
+                        Success = true
+                    });
                 }
                 else
                 {
@@ -108,7 +114,7 @@ namespace TodoAppWithJWT.Controllers
                         Errors = new List<string>() {
                             "Invalid login request"
                         },
-
+                        
                         Success = false
                     });
                 }
@@ -129,7 +135,14 @@ namespace TodoAppWithJWT.Controllers
 
                 var jwtToken = await GenerateJwtToken(existingUser);
 
-                return Ok(jwtToken);
+                return Ok(new GlobalResponse()
+                {
+                    Message = new List<string>() {
+                        "ResultMessage: " + "Anda sudah login, berikut informasi token anda",
+                    },
+                    result = jwtToken,
+                    Success = true
+                });
             }
 
             return BadRequest(new RegistrationResponse()
@@ -160,7 +173,14 @@ namespace TodoAppWithJWT.Controllers
                     });
                 }
 
-                return Ok(result);
+                return Ok(new GlobalResponse()
+                {
+                    Message = new List<string>() {
+                        "ResultMessage: " + "Berikut token anda yang baru",
+                    },
+                    result = result,
+                    Success = true
+                });
             }
 
             return BadRequest(new RegistrationResponse()
@@ -308,7 +328,7 @@ namespace TodoAppWithJWT.Controllers
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                 }),
 
-                Expires = DateTime.UtcNow.AddMinutes(30),
+                Expires = DateTime.UtcNow.AddMinutes(1),
                 SigningCredentials = new SigningCredentials(
                     new SymmetricSecurityKey(key),
                     SecurityAlgorithms.HmacSha256Signature

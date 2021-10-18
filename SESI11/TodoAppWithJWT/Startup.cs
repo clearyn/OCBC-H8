@@ -113,7 +113,7 @@ namespace TodoAppWithJWT
             }
 
             //Bila dikomen swagger jalan semua (ada masalah sama ssl sertificate local) 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
 
             app.UseRouting();
 

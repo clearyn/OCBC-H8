@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\": \"swijaya@hacktiv8.com\",\r\n    \"email\": \"swijaya@hacktiv8.com\",\r\n    \"password\": \"Password12345!\"\r\n}",
+					"raw": "{\r\n    \"username\": \"john@bank10.com\",\r\n    \"email\": \"john@bank10.com\",\r\n    \"password\": \"Password12345!\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -42,7 +42,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"swijaya@hacktiv8.com\",\r\n    \"password\": \"Password12345!\"\r\n}",
+					"raw": "{\r\n    \"email\": \"john@bank10.com\",\r\n    \"password\": \"Password12345!\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -78,7 +78,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"John Wick\",\r\n  \"genre\": \"Action/Thriller\",\r\n  \"duration\": \"1h 41mins\",\r\n  \"releaseDate\": \"2014-10-24T00:00:00.00Z\"\r\n}",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6Ijc1NGJmNDUyLTRmODktNGU1NC04YmU3LTkyNmMzNzZhMGYzMSIsImVtYWlsIjoiam9obkBiYW5rMTAuY29tIiwic3ViIjoiam9obkBiYW5rMTAuY29tIiwianRpIjoiODdiMDMwMmMtZDlhNC00YjA2LTkwNTYtZDMwMTMyOTZkODdmIiwibmJmIjoxNjM0NTQ2Mjk5LCJleHAiOjE2MzQ1NDYzMjksImlhdCI6MTYzNDU0NjI5OX0.T_hThd_Dp23tn8Kg3la745IiMu7FopoXQPt_iHewxNI\",\r\n        \"refreshToken\": \"2IQX0A6SKJFLBEXUPV65T3H0BCUHKB7O6XI3a9c51d6-3592-4df7-85aa-34ee332b85d6\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -86,7 +86,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://localhost:5001/api/MoviesAPI",
+					"raw": "https://localhost:5001/api/AuthManagement/RefreshToken",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -94,7 +94,8 @@
 					"port": "5001",
 					"path": [
 						"api",
-						"MoviesAPI"
+						"AuthManagement",
+						"RefreshToken"
 					]
 				}
 			},
@@ -107,13 +108,13 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjQ0MDEzNWFiLWQ4ZmMtNDg4Yi1iYzZkLTcyMzIxODdiN2NkNyIsImVtYWlsIjoic3dpamF5YUBoYWNrdGl2OC5jb20iLCJzdWIiOiJzd2lqYXlhQGhhY2t0aXY4LmNvbSIsImp0aSI6IjU5YmU1OWU1LWRkZGMtNDNlMi1hMDdiLWQyZmVjMmUxMDdmMiIsIm5iZiI6MTYzNDQ5NDExMiwiZXhwIjoxNjM0NTE1NzEyLCJpYXQiOjE2MzQ0OTQxMTJ9.LSL5PAcd2w3NKGl4cXd2crNkUWKA79Kxi35ZZD40NTs",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6Ijc1NGJmNDUyLTRmODktNGU1NC04YmU3LTkyNmMzNzZhMGYzMSIsImVtYWlsIjoiam9obkBiYW5rMTAuY29tIiwic3ViIjoiam9obkBiYW5rMTAuY29tIiwianRpIjoiZGJkODE5MWEtZmE4ZC00NzA1LTkwNjMtNzdiZDBlNjU1ZjU1IiwibmJmIjoxNjM0NTQ2ODE3LCJleHAiOjE2MzQ1NDY4NDcsImlhdCI6MTYzNDU0NjgxN30.DwAxWj2tPtGE3ZKXQN4nIJk01xhO9O9QQAgNCBKB3Nk",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"John Wick\",\r\n  \"genre\": \"Action/Thriller\",\r\n  \"duration\": \"1h 41mins\",\r\n  \"releaseDate\": \"2014-10-24T00:00:00.00Z\"\r\n}",
+					"raw": "{\r\n    \"title\": \"Voucher diskon N-MAX\",\r\n    \"Description\": \"Berlaku hingga 10 DES 2021\",\r\n    \"done\": true\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -121,7 +122,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://localhost:5001/api/MoviesAPI",
+					"raw": "https://localhost:5001/api/Todo",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -129,7 +130,7 @@
 					"port": "5001",
 					"path": [
 						"api",
-						"MoviesAPI"
+						"Todo"
 					]
 				}
 			},
