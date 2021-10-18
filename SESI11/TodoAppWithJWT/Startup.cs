@@ -36,13 +36,13 @@ namespace TodoAppWithJWT
             var key = Encoding.ASCII.GetBytes(Configuration["JwtConfig:Secret"]);
 
             var tokenValidationParams = new TokenValidationParameters {
-                ValidateIssueSigningKey = true,
-                IssuerSigningKey = new SymetricSecurityKey(key),
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(key),
                 ValidateIssuer = false,
-                ValidateAuidence = false,
+                ValidateAudience = false,
                 ValidateLifetime = true,
-                RequestExpirationTime = false,
-                ClockSkey = TimeSpan.Zero
+                RequireExpirationTime = false,
+                ClockSkew = TimeSpan.Zero
             };
 
             services.AddSingleton(tokenValidationParams);
@@ -69,6 +69,13 @@ namespace TodoAppWithJWT
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TodoApp", Version = "v1" });
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer"
+                });
             });
         }
 

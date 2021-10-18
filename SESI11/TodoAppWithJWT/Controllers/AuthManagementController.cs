@@ -12,6 +12,9 @@ using Microsoft.Extensions.Options;
 using TodoAppWithJWT.Configuration;
 using TodoAppWithJWT.Models.DTOs.Requests;
 using TodoAppWithJWT.Models.DTOs.Responses;
+using TodoAppWithJWT.Data;
+using TodoAppWithJWT.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace TodoAppWithJWT.Controllers
 {
@@ -23,14 +26,20 @@ namespace TodoAppWithJWT.Controllers
         private readonly UserManager<IdentityUser> _userManager;
         private readonly JwtConfig _jwtConfig;
 
+        // Modified on sesi 11 refresh token
+        private readonly TokenValidationParameters _tokenValidationParams;
+        private readonly ApiDbContext _apiDbContext;
         public AuthManagementController(
             UserManager<IdentityUser> userManager,
-            IOptionsMonitor<JwtConfig> optionsMonitor
+            IOptionsMonitor<JwtConfig> optionsMonitor,
+            TokenValidationParameters tokenValidationParameters,
+            ApiDbContext apiDbContext
         )
         {
             _userManager = userManager;
             _jwtConfig = optionsMonitor.CurrentValue;
-            //Console.WriteLine(_jwtConfig.Secret);
+            _tokenValidationParams = tokenValidationParameters;
+            _apiDbContext = apiDbContext;
         }
 
 
@@ -38,13 +47,14 @@ namespace TodoAppWithJWT.Controllers
         [Route("Register")]
         public async Task<IActionResult> Register([FromBody] UserRegistrationDto user)
         {
-            if (ModelState.IsValid) 
+            if (ModelState.IsValid)
             {
                 var existingUser = await _userManager.FindByEmailAsync(user.Email);
 
-                if(existingUser != null)
+                if (existingUser != null)
                 {
-                    return BadRequest(new RegistrationResponse(){
+                    return BadRequest(new RegistrationResponse()
+                    {
                         Errors = new List<string>() {
                             "Email already in user"
                         },
@@ -52,29 +62,28 @@ namespace TodoAppWithJWT.Controllers
                     });
                 }
 
-                var newUser = new IdentityUser() {Email = user.Email, UserName = user.Username};
+                var newUser = new IdentityUser() { Email = user.Email, UserName = user.Username };
                 var isCreated = await _userManager.CreateAsync(newUser, user.Password);
 
-                if(isCreated.Succeeded)
+                if (isCreated.Succeeded)
                 {
-                    var jwtToken = GenerateJwtToken(newUser);
+                    var jwtToken = await GenerateJwtToken(newUser);
 
-                    return Ok(new RegistrationResponse() {
-                        Success = true,
-                        Token = jwtToken
-                    });
+                    return Ok(jwtToken);
                 }
                 else
                 {
-                    return BadRequest(new RegistrationResponse() {
+                    return BadRequest(new RegistrationResponse()
+                    {
                         Errors = isCreated.Errors.Select(x => x.Description).ToList(),
                         Success = false
                     });
                 }
             }
 
-        
-            return BadRequest(new RegistrationResponse() {
+
+            return BadRequest(new RegistrationResponse()
+            {
                 Errors = new List<string>() {
                     "Invalid payload"
                 },
@@ -86,15 +95,16 @@ namespace TodoAppWithJWT.Controllers
 
         [HttpPost]
         [Route("Login")]
-        public async Task<IActionResult> Login ([FromBody] UserLoginRequest user)
+        public async Task<IActionResult> Login([FromBody] UserLoginRequest user)
         {
             if (ModelState.IsValid)
             {
                 var existingUser = await _userManager.FindByEmailAsync(user.Email);
 
-                if(existingUser == null)
+                if (existingUser == null)
                 {
-                    return BadRequest(new RegistrationResponse() {
+                    return BadRequest(new RegistrationResponse()
+                    {
                         Errors = new List<string>() {
                             "Invalid login request"
                         },
@@ -105,9 +115,10 @@ namespace TodoAppWithJWT.Controllers
 
                 var isCorrect = await _userManager.CheckPasswordAsync(existingUser, user.Password);
 
-                if(!isCorrect)
+                if (!isCorrect)
                 {
-                    return BadRequest(new RegistrationResponse(){
+                    return BadRequest(new RegistrationResponse()
+                    {
                         Errors = new List<string>() {
                             "Invalid login request"
                         },
@@ -116,15 +127,13 @@ namespace TodoAppWithJWT.Controllers
                 }
 
 
-                var jwtToken = GenerateJwtToken(existingUser);
+                var jwtToken = await GenerateJwtToken(existingUser);
 
-                return Ok(new RegistrationResponse() {
-                    Success = true,
-                    Token = jwtToken
-                });
+                return Ok(jwtToken);
             }
 
-            return BadRequest(new RegistrationResponse() {
+            return BadRequest(new RegistrationResponse()
+            {
                 Errors = new List<string>() {
                     "Invalid payload"
                 },
@@ -132,7 +141,159 @@ namespace TodoAppWithJWT.Controllers
             });
         }
 
-        private string GenerateJwtToken(IdentityUser user)
+        [HttpPost]
+        [Route("RefreshToken")]
+        public async Task<IActionResult> RefreshToken([FromBody] TokenRequest tokenRequest)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await VerifyAndGenerateToken(tokenRequest);
+
+                if (result == null)
+                {
+                    return BadRequest(new RegistrationResponse()
+                    {
+                        Errors = new List<string>{
+                            "Invalid tokens"
+                        },
+                        Success = false
+                    });
+                }
+
+                return Ok(result);
+            }
+
+            return BadRequest(new RegistrationResponse()
+            {
+                Errors = new List<string>{
+                    "Invalid payload"
+                },
+                Success = false
+            });
+        }
+
+        private async Task<AuthResult> VerifyAndGenerateToken(TokenRequest tokenRequest)
+        {
+            var jwtTokenHandler = new JwtSecurityTokenHandler();
+
+            try
+            {   
+                // Validation 1 - Validation JWT token format
+                var tokenInVerification = jwtTokenHandler.ValidateToken(tokenRequest.Token, _tokenValidationParams, out var validatedToken);
+
+                // Validation 2 - validate encryption alg
+                if(validatedToken is JwtSecurityToken jwtSecurityToken)
+                {
+                    var result = jwtSecurityToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256, StringComparison.InvariantCultureIgnoreCase);
+
+                    if(result == false){
+                        return null;
+                    }                    
+                }
+
+                // Validation 3 - validate expiry date
+                var utcExpiryDate = long.Parse(tokenInVerification.Claims.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Exp).Value);
+
+                var expiryDate = UnixTimeStampToDateTime(utcExpiryDate);
+
+                if (expiryDate > DateTime.UtcNow)
+                {
+                    return new AuthResult(){
+                        Success = false,
+                        Errors = new List<string>(){"Token has not yet expired"}
+                    };
+                }
+
+                // Validation 4 - validate existence of the token
+                var storedToken = await _apiDbContext.RefreshTokens.FirstOrDefaultAsync(x => x.Token == tokenRequest.RefreshToken);
+
+                if (storedToken == null)
+                {
+                    return new AuthResult(){
+                        Success = false,
+                        Errors = new List<string>{
+                            "Token does not exist"
+                        }
+                    };
+                }
+
+                // Validation 5 - validate if used
+                if (storedToken.IsUsed)
+                {
+                    return new AuthResult(){
+                        Success = false,
+                        Errors = new List<string>{
+                            "TokenRequest has been used"
+                        }
+                    };
+                }
+
+                // Validation 6 - validate if revoked
+                if (storedToken.IsRevoked)
+                {
+                    return new AuthResult(){
+                        Success = false,
+                        Errors = new List<string>{
+                            "Token has been revoked"
+                        }
+                    };
+                }
+
+                // Validation 7 - validate the id
+                var jti = tokenInVerification.Claims.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Jti).Value;
+
+                if (storedToken.JwtId != jti)
+                {
+                    return new AuthResult(){
+                        Success = false,
+                        Errors = new List<string>{
+                            "Token does not match"
+                        }
+                    };
+                }
+
+                //Update current token
+                storedToken.IsUsed = true;
+                _apiDbContext.RefreshTokens.Update(storedToken);
+                await _apiDbContext.SaveChangesAsync();
+
+                //Generate a new token
+                var dbUser = await _userManager.FindByIdAsync(storedToken.UserId);
+                return await GenerateJwtToken(dbUser);
+
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.Contains("Lifetime validation failed. The token is expired."))
+                {
+
+                    return new AuthResult(){
+                        Success = false,
+                        Errors = new List<string>{
+                            "Token has expired please re-login"
+                        }
+                    };
+
+                }else{
+                    return new AuthResult(){
+                        Success = false,
+                        Errors = new List<string>{
+                            "Something went wrong."
+                        }
+                    };
+                }
+            }
+        }
+
+        private DateTime UnixTimeStampToDateTime(long unixTimeStamp)
+        {
+            var dateTimeVal = new DateTime(1970, 1,1,0,0,0,0, DateTimeKind.Utc);
+            dateTimeVal = dateTimeVal.AddSeconds(unixTimeStamp).ToUniversalTime();
+
+            return dateTimeVal;
+        }
+
+        private async Task<AuthResult> GenerateJwtToken(IdentityUser user)
         {
             var jwtTokenHandler = new JwtSecurityTokenHandler();
 
@@ -140,14 +301,14 @@ namespace TodoAppWithJWT.Controllers
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
-                Subject = new ClaimsIdentity(new [] {
+                Subject = new ClaimsIdentity(new[] {
                     new Claim("Id", user.Id),
                     new Claim(JwtRegisteredClaimNames.Email, user.Email),
                     new Claim(JwtRegisteredClaimNames.Sub, user.Email),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                 }),
 
-                Expires = DateTime.UtcNow.AddSeconds(30),
+                Expires = DateTime.UtcNow.AddMinutes(30),
                 SigningCredentials = new SigningCredentials(
                     new SymmetricSecurityKey(key),
                     SecurityAlgorithms.HmacSha256Signature
@@ -156,8 +317,34 @@ namespace TodoAppWithJWT.Controllers
 
             var token = jwtTokenHandler.CreateToken(tokenDescriptor);
             var jwtToken = jwtTokenHandler.WriteToken(token);
+            var refreshToken = new RefreshToken()
+            {
+                JwtId = token.Id,
+                IsUsed = false,
+                IsRevoked = false,
+                UserId = user.Id,
+                AddedDate = DateTime.UtcNow,
+                ExpiryDate = DateTime.UtcNow.AddMonths(6),
+                Token = RandomString(35) + Guid.NewGuid()
+            };
 
-            return jwtToken;
+            await _apiDbContext.RefreshTokens.AddAsync(refreshToken);
+            await _apiDbContext.SaveChangesAsync();
+
+            return new AuthResult()
+            {
+                Token = jwtToken,
+                Success = true,
+                RefreshToken = refreshToken.Token
+            };
+        }
+
+        private string RandomString(int length)
+        {
+            var random = new Random();
+            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+                .Select(x => x[random.Next(x.Length)]).ToArray());
         }
 
 
