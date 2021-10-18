@@ -10,7 +10,7 @@ File Pendamping:
 2.moviesdb.sql (SQL)
 
 Langkah Pengujian :
-1. Download dan extract 003_RyanCleary_Assignment3
+1. Download dan extract 003_RyanCleary_Assignment3 lalu buka file di VSCode / Visual Studio
 2. Nyalakan MySql pada xampp
 3. Run Project menggunakan perintah "dotnet run" pada direktori MoviesAPI
 4. Buka aplikasi Postman lalu import file -> Test_MovieAPI.postman_collection.json
