@@ -178,3 +178,4 @@ C:\Users\ryncl\Desktop\OCBC\SESI11\TodoAppWithJWT\obj\Debug\net5.0\TodoAppWithJW
 C:\Users\ryncl\Desktop\OCBC\SESI11\TodoAppWithJWT\obj\Debug\net5.0\ref\TodoAppWithJWT.dll
 C:\Users\ryncl\Desktop\OCBC\SESI11\TodoAppWithJWT\obj\Debug\net5.0\TodoAppWithJWT.pdb
 C:\Users\ryncl\Desktop\OCBC\SESI11\TodoAppWithJWT\obj\Debug\net5.0\TodoAppWithJWT.genruntimeconfig.cache
+C:\Users\ryncl\Desktop\OCBC\SESI11\TodoAppWithJWT\bin\Debug\net5.0\JSON Database & Postman\SESI11.postman_collection.json

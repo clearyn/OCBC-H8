@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "b3622ce0-f002-49ce-bb72-e060cf00eac7",
+		"name": "SESI11",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:5001/api/authmanagement/register Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"swijaya@hacktiv8.com\",\r\n    \"email\": \"swijaya@hacktiv8.com\",\r\n    \"password\": \"Password12345!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/authmanagement/register",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"authmanagement",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:5001/api/authmanagement/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"swijaya@hacktiv8.com\",\r\n    \"password\": \"Password12345!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/authmanagement/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"authmanagement",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:5001/api/MoviesAPI",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjQ0MDEzNWFiLWQ4ZmMtNDg4Yi1iYzZkLTcyMzIxODdiN2NkNyIsImVtYWlsIjoic3dpamF5YUBoYWNrdGl2OC5jb20iLCJzdWIiOiJzd2lqYXlhQGhhY2t0aXY4LmNvbSIsImp0aSI6IjU5YmU1OWU1LWRkZGMtNDNlMi1hMDdiLWQyZmVjMmUxMDdmMiIsIm5iZiI6MTYzNDQ5NDExMiwiZXhwIjoxNjM0NTE1NzEyLCJpYXQiOjE2MzQ0OTQxMTJ9.LSL5PAcd2w3NKGl4cXd2crNkUWKA79Kxi35ZZD40NTs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"John Wick\",\r\n  \"genre\": \"Action/Thriller\",\r\n  \"duration\": \"1h 41mins\",\r\n  \"releaseDate\": \"2014-10-24T00:00:00.00Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/MoviesAPI",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"MoviesAPI"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:5001/api/MoviesAPI Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjQ0MDEzNWFiLWQ4ZmMtNDg4Yi1iYzZkLTcyMzIxODdiN2NkNyIsImVtYWlsIjoic3dpamF5YUBoYWNrdGl2OC5jb20iLCJzdWIiOiJzd2lqYXlhQGhhY2t0aXY4LmNvbSIsImp0aSI6IjU5YmU1OWU1LWRkZGMtNDNlMi1hMDdiLWQyZmVjMmUxMDdmMiIsIm5iZiI6MTYzNDQ5NDExMiwiZXhwIjoxNjM0NTE1NzEyLCJpYXQiOjE2MzQ0OTQxMTJ9.LSL5PAcd2w3NKGl4cXd2crNkUWKA79Kxi35ZZD40NTs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"John Wick\",\r\n  \"genre\": \"Action/Thriller\",\r\n  \"duration\": \"1h 41mins\",\r\n  \"releaseDate\": \"2014-10-24T00:00:00.00Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/MoviesAPI",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"MoviesAPI"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

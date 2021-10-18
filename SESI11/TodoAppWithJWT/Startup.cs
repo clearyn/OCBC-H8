@@ -19,7 +19,8 @@ using Microsoft.AspNetCore.Identity;
 namespace TodoAppWithJWT
 {
     public class Startup
-    {
+    {   
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -46,7 +47,7 @@ namespace TodoAppWithJWT
             };
 
             services.AddSingleton(tokenValidationParams);
-
+        
             services.AddAuthentication(options => {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -70,11 +71,32 @@ namespace TodoAppWithJWT
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TodoApp", Version = "v1" });
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-                {
+                {   
+                    Description = @"JWT Authorization header using the Bearer scheme. \r\n\r\n 
+                      Enter 'Bearer' [space] and then your token in the text input below.
+                      \r\n\r\nExample: 'Bearer 12345abcdef'",
                     Name = "Authorization",
                     In = ParameterLocation.Header,
                     Type = SecuritySchemeType.ApiKey,
                     Scheme = "Bearer"
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+                {
+                    {
+                    new OpenApiSecurityScheme
+                    {
+                        Reference = new OpenApiReference
+                        {
+                            Type = ReferenceType.SecurityScheme,
+                            Id = "Bearer"
+                        },
+                        Scheme = "oauth2",
+                        Name = "Bearer",
+                        In = ParameterLocation.Header,
+
+                        },
+                        new List<string>()
+                    }
                 });
             });
         }
@@ -90,7 +112,8 @@ namespace TodoAppWithJWT
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TodoApp v1"));
             }
 
-            app.UseHttpsRedirection();
+            //Bila dikomen swagger jalan semua (ada masalah sama ssl sertificate local) 
+            // app.UseHttpsRedirection();
 
             app.UseRouting();
 
