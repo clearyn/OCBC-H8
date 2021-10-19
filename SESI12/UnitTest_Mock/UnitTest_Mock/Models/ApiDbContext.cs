@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace UnitTest_Mock.Models
 {
-    public class Class
+    public class ApiDbContext
     {
     }
 }
