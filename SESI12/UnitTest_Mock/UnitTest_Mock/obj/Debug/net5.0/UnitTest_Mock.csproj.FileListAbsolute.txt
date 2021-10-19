@@ -53,8 +53,8 @@ C:\Users\ryncl\Desktop\OCBC\SESI12\UnitTest_Mock\UnitTest_Mock\obj\Debug\net5.0\
 C:\Users\ryncl\Desktop\OCBC\SESI12\UnitTest_Mock\UnitTest_Mock\obj\Debug\net5.0\staticwebassets\UnitTest_Mock.StaticWebAssets.xml
 C:\Users\ryncl\Desktop\OCBC\SESI12\UnitTest_Mock\UnitTest_Mock\obj\Debug\net5.0\scopedcss\bundle\UnitTest_Mock.styles.css
 C:\Users\ryncl\Desktop\OCBC\SESI12\UnitTest_Mock\UnitTest_Mock\obj\Debug\net5.0\UnitTest_Mock.RazorTargetAssemblyInfo.cache
-C:\Users\ryncl\Desktop\OCBC\SESI12\UnitTest_Mock\UnitTest_Mock\obj\Debug\net5.0\UnitTest_Mock.csproj.CopyComplete
 C:\Users\ryncl\Desktop\OCBC\SESI12\UnitTest_Mock\UnitTest_Mock\obj\Debug\net5.0\UnitTest_Mock.dll
 C:\Users\ryncl\Desktop\OCBC\SESI12\UnitTest_Mock\UnitTest_Mock\obj\Debug\net5.0\ref\UnitTest_Mock.dll
 C:\Users\ryncl\Desktop\OCBC\SESI12\UnitTest_Mock\UnitTest_Mock\obj\Debug\net5.0\UnitTest_Mock.pdb
 C:\Users\ryncl\Desktop\OCBC\SESI12\UnitTest_Mock\UnitTest_Mock\obj\Debug\net5.0\UnitTest_Mock.genruntimeconfig.cache
+C:\Users\ryncl\Desktop\OCBC\SESI12\UnitTest_Mock\UnitTest_Mock\obj\Debug\net5.0\UnitTest_Mock.csproj.AssemblyReference.cache
