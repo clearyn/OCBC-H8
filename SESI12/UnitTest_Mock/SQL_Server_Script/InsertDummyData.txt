@@ -1,0 +1,4 @@
+
+INSERT INTO Employees(Name, Designation) VALUES ('Ryan', 'Jakarta'),
+('Diki', 'Ciwidey'),
+('Joseph', 'Bandung');
