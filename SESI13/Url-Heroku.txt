@@ -1,2 +1,5 @@
 //Url untuk hasil heroku, Terimakasih
 https://demo-corewebapi-ryancleary.herokuapp.com/WeatherForecast
+
+//Untuk project asli saya buat repo terpisah
+https://github.com/clearyn/demo-corewebapi
