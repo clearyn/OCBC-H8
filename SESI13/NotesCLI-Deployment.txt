@@ -1,0 +1,19 @@
+1.heroku login -i
+2.heroku git:remote -a demo-corewebapi-003
+3.gh auth login
+4.generate ssh dan otp
+5.gh repo create project-name
+6.dotnet new gitignore
+7.git pull --set-upstream origin main
+8.git add .
+9.git commit -m "initial commit"
+10.git pull origin branchname --allow-unrelated-histories
+
+11.dotnet publish -c Release
+12.docker build -t [NAMA_APP]:dev .(di folder dalam)
+13.docker run -d -p 5000:80 --name myapp [NAMA_APP]:dev
+14.docker tag [NAMA_APP]:dev registry.heroku.com/[NAMA_DYNO_HEROKU]/web
+
+15.heroku container:push web -a [NAMA_DYNO_HEROKU]
+16.heroku container:release web -a [NAMA_DYNO_HEROKU]
+
