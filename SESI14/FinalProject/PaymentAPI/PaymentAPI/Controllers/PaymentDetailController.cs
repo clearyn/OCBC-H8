@@ -1,20 +1,18 @@
 ﻿using System.Threading.Tasks;
 using System.Collections.Generic;
-//using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-//using PaymentAPI.Models.DTOs.Requests;
-//using PaymentAPI.Models.DTOs.Responses;
+using PaymentAPI.Models.DTOs.Responses;
 using PaymentAPI.Data;
 using PaymentAPI.Models;
-using PaymentAPI.Models.DTOs.Responses;
 
 namespace PaymentAPI_SqLite.Controllers
 {
     [Route("api/[controller]")] // Define routing
     [ApiController] // We need to specify type controller
-    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]// Login user only aka JWT Auth
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]// Login user only aka JWT Auth
     public class PaymentDetail : ControllerBase
     {
         private readonly ApiDbContext _context;
@@ -116,12 +114,6 @@ namespace PaymentAPI_SqLite.Controllers
                 Success = true
             });
         }
-
-        // [Route("TestRun")]
-        // public ActionResult TestRun()
-        // {
-        //     return Ok("success");
-        // }
 
     }
 }
