@@ -1,0 +1,30 @@
+//Cara Penggunaan API Local 003_RyanCleary_FinalProject
+//Nama:	Ryan Cleary
+//Kode: FSDO001ONL003
+
+
+//Setting Awal
+1.Extract folder PaymentAPI.
+2.Nyalakan Xampp (Apache dan MySQL).
+3.Sesuaikan ijin akses aplikasi pada file PaymentAPI->appseting.json dan sesuaikan baris ke 3 ("Server=localhost;Port=3306;Database=paymentdb;Uid=[Username_mysql_anda];Pwd=[Password_mysql_anda]") lalu save.
+
+//Masukan sample database
+4.Pada direktori PaymentAPI ketikan pada command line perintah 'dotnet ef database update' untuk memasukan 4 baris sample item.
+5.Alternatif no 4 anda bisa langsung import file paymentdb.sql melalui sql script.
+
+//Running Project
+5.Pada direktori PaymentAPI run project melalui command line dengan perintah 'dotnet run'.
+
+//Pengujian Swagger
+7.Untuk pengujian swagger ketikan 'https://localhost:5001/swagger/index.html'.
+8.Pada bagian 'AuthManagement' klik 'Try it out' pada /api/AuthManagement/Register dan ubah body bagian password dengan campuran symbol, huruf besar contoh '@string1A' lalu -> execute.
+9.Masukan kembali email
+9.Setelah mendapat respon berhasil masukan email dan password pada method /Login lalu -> execute.
+10.Untuk memperbaharui Jwt gunakan metode /RefreshToken dengan memasukan token dan kode refresh token lalu -> execute.
+11.Copy token pada result method /Login atau /RefreshToken lalu klik tombol authorize pada halaman atas swagger.
+12.Masukan value seperti contoh yang tertera atau  'Bearer No-Token' lalu klik authorize.
+13.Lanjut ke bagian PaymentDetail isi parameter atau edit body seperti contoh yang diberikan (Apabila result menunjukan not authorize lihat step no 11).
+14.Akses semua API yang tersedia dengan merujuk panduan no 13 dan keterangan contoh pada masing masing method.
+
+
+//Pengujian Postman
