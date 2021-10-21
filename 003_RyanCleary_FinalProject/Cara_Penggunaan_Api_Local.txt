@@ -1,6 +1,7 @@
 //Cara Penggunaan API Local 003_RyanCleary_FinalProject
 //Nama:	Ryan Cleary
 //Kode: FSDO001ONL003
+//Github Link: https://github.com/clearyn/OCBC-H8/tree/main/003_RyanCleary_FinalProject
 
 
 //Setting Awal
@@ -28,3 +29,10 @@
 
 
 //Pengujian Postman
+15.Import file 003_RyanCleary_FinalProject.postman_collection.json.
+16.Lakukan langkah seperti pada pengujian swagger yaitu dengan register->login.
+17.Ubah token pada tab Header bagian Authorization ganti dengan yang baru dari method login.
+18.Lakukan hal yang sama untuk seluruh method bernama PaymentDetail lalu isi parameter atau edit body JSON sesuai contoh.
+
+
+Terima Kasih atas kerjasamanya
