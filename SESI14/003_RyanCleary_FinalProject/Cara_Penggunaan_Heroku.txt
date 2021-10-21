@@ -1,1 +1,4 @@
-Masih dalam progress, diupdate setelah assignment 22/10/2021
+Masih dalam progress, diupdate setelah assignment 22/10/2021 (Belum Bisa auto generate database connection)
+
+link git: https://github.com/clearyn/PaymentAPI
+link heroku: https://paymentapi-003.herokuapp.com/
