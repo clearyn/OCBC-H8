@@ -1,4 +1,26 @@
-Masih dalam progress, diupdate setelah assignment 22/10/2021 (Belum Bisa auto generate database connection)
+//Cara Penggunaan API Heroku
+//Nama:	Ryan Cleary
+//Kode: FSDO001ONL003
+//Github Link: https://github.com/clearyn/PaymentAPI
+//Heroku Link: https://paymentapi-003.herokuapp.com
+//Note : Untuk tampilan awal memang cant be found karena tidak ada alamat awal
 
-link git: https://github.com/clearyn/PaymentAPI
-link heroku: https://paymentapi-003.herokuapp.com/
+
+//Pengujian Swagger
+1.Masukan 'https://paymentapi-003.herokuapp.com/swagger/index.html' url di browser.
+2.Pada bagian 'AuthManagement' klik 'Try it out' pada /api/AuthManagement/Register dan ubah body bagian password dengan campuran symbol, huruf besar contoh '@string1A' lalu -> execute.
+3.Masukan kembali email
+4.Setelah mendapat respon berhasil masukan email dan password pada method /Login lalu -> execute.
+5.Untuk memperbaharui Jwt gunakan metode /RefreshToken dengan memasukan token dan kode refresh token lalu -> execute.
+6.Copy token pada result method /Login atau /RefreshToken lalu klik tombol authorize pada halaman atas swagger.
+7.Masukan value seperti contoh yang tertera atau  'Bearer No-Token' lalu klik authorize.
+8.Lanjut ke bagian PaymentDetail isi parameter atau edit body seperti contoh yang diberikan (Apabila result menunjukan not authorize lihat step no 6).
+9.Akses semua API yang tersedia dengan merujuk panduan no 8 dan keterangan contoh pada masing masing method.
+
+//Pengujian Postman
+15.Import file '003_RyanCleary_FinalProject_Heroku.postman_collection.json' di aplikasi postman.
+16.Lakukan langkah seperti pada pengujian swagger yaitu dengan register->login.
+17.ntuk endpoint yang memiliki nama PaymentDetail, copy token pada tab Header bagian Authorization ganti dengan yang baru dari method login.
+18.Lakukan hal yang sama untuk seluruh method bernama PaymentDetail lalu isi parameter atau edit body JSON sesuai contoh.
+
+Terima Kasih atas kerjasamanya

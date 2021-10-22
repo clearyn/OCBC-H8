@@ -29,9 +29,9 @@
 
 
 //Pengujian Postman
-15.Import file 003_RyanCleary_FinalProject.postman_collection.json.
+15.Import file '003_RyanCleary_FinalProject.postman_collection.json' di aplikasi postman.
 16.Lakukan langkah seperti pada pengujian swagger yaitu dengan register->login.
-17.Ubah token pada tab Header bagian Authorization ganti dengan yang baru dari method login.
+17.Untuk endpoint yang memiliki nama PaymentDetail, copy token pada tab Header bagian Authorization ganti dengan yang baru dari method login.
 18.Lakukan hal yang sama untuk seluruh method bernama PaymentDetail lalu isi parameter atau edit body JSON sesuai contoh.
 
 

@@ -1,4 +1,7 @@
-Masih dalam progress, diupdate setelah assignment 22/10/2021 (Belum Bisa auto generate database connection)
+//Link Github Heroku
 
-link git: https://github.com/clearyn/PaymentAPI
-link heroku: https://paymentapi-003.herokuapp.com/
+//Nama:	Ryan Cleary
+//Kode: FSDO001ONL003
+//Github Link: https://github.com/clearyn/PaymentAPI
+//Heroku Link: https://paymentapi-003.herokuapp.com/swagger/index.html
+//Note : Untuk tampilan awal memang cant be found karena tidak ada alamat awal
